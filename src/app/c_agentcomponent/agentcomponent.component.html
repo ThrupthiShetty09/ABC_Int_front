@@ -1,0 +1,32 @@
+<form ngForm>
+<div *ngFor='let model of getData'> 
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="name" required [(ngModel)]="model.empname" name="empname"aria-describedby="emailHelp" >
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Address</label>
+    <input type="text" class="form-control"  id="address" required [(ngModel)]="model.address" name="address" >
+  </div>
+ <div class="form-group">
+    <label for="exampleInputEmail1">DOB</label>
+    <input type="text" class="form-control" id="dob" required [(ngModel)]="model.empdob" name="empdob"aria-describedby="emailHelp" >
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Contact</label>
+    <input type="number" class="form-control" id="contact" required [(ngModel)]="model.empcontact" name="empcontact"aria-describedby="emailHelp" >
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Mail</label>
+    <input type="email" class="form-control" id="mail" required [(ngModel)]="model.empmail" name="empmail"aria-describedby="emailHelp" >
+   
+  </div>
+
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="updated1()" >Submit</button>
+
+</form>

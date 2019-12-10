@@ -1,0 +1,116 @@
+<body style="background: #e0ffff">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href=""><img src="assets/image/logo.png" style="height:50px;"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+      
+
+<ul class="nav justify-content-end">
+   <li class="nav-item dropdown">
+
+        <div  style="right:0; z-index: 10000;">
+          <button class="btn btn-light" href="" (click)="home3()" ><img src="./assets/image/home.png" style="width: :35px;height: 35px;"/>
+          </button>
+          <button class="btn btn-light" href="" (click)="logout()" ><img src="./assets/image/logout.png" style="width: :31.5px;height: 31.5px;"/>
+          </button>
+          
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #43C6DB; padding-left:130px; height: 82px">
+</nav>
+
+
+  <br>
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="createCustomer()">
+
+    <div class="form-group">
+    <label for="name"style="color:black;font-weight: bold;font-family: Times New Roman;">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="ename"
+           [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.ename.errors }"
+        />
+    <div *ngIf="submitted &amp;&amp; registerForm.controls.ename.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.ename.errors.required">Name is required</div>
+        <div *ngIf="registerForm.controls.ename.errors.pattern">Please enter alphabets</div>
+    </div>
+    
+    
+  </div>
+
+  <div class="form-group">
+    <label for="dob" style="color:black;font-weight: bold;font-family: Times New Roman;">Date of Birth</label>
+    <input type="date"  class="form-control" id="dob" formControlName="edob" required
+           [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.edob.errors }"/>
+    <div *ngIf="submitted &amp;&amp; registerForm.controls.edob.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.edob.errors.required">DOB is required</div>
+
+    </div>
+  </div>
+
+  <div class="form-group">
+   <label for="phno"style="color:black;font-weight: bold;font-family: Times New Roman;">Contact Number</label>
+    <input type="text" class="form-control" id="phno" formControlName="ephno"
+           required
+           
+           [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.ephno.errors }" />
+      <div *ngIf="submitted &amp;&amp; registerForm.controls.ephno.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.ephno.errors.required">Contact is required</div>
+        <div *ngIf="registerForm.controls.ephno.errors.minLength">Contact is less than 10</div>
+        <div *ngIf="registerForm.controls.ephno.errors.pattern">Please enter 10-digits</div>
+    </div>
+  </div>
+  <div class="form-group">
+   <label for="username"style="color:black;font-weight: bold;font-family: Times New Roman;">Username</label>
+    <input type="text" class="form-control" id="username" formControlName="eusername"
+           required
+           
+           [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.eusername.errors }"/>
+
+    <div *ngIf="submitted &amp;&amp; registerForm.controls.eusername.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.eusername.errors.required">Username is required</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+   <label for="password"style="color:black;font-weight: bold;font-family: Times New Roman;">Password</label>
+    <input type="text" class="form-control" id="password" formControlName="epassword"
+           required
+           
+           [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.epassword.errors }"/>
+    <div *ngIf="submitted &amp;&amp; registerForm.controls.epassword.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.epassword.errors.required">Password is required</div>
+    </div>
+  </div>
+
+  <!--<div class="form-group">
+   <label for="role"style="color:black;font-weight: bold;font-family: Times New Roman;">Role</label>
+    <input type="text" class="form-control" id="role" formControlName="erole"
+           required
+           [(ngModel)]="emprole" name="role" [readonly]="true"
+          [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.erole.errors }" />
+    <div *ngIf="submitted &amp;&amp; registerForm.controls.erole.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.erole.errors.required">Name is required</div>
+    </div>
+  </div>-->
+
+   
+<br>
+
+   <button class="btn btn-info" style="color:black;font-weight: bold;font-family: Times New Roman;">Submit</button>&nbsp;
+
+
+  </form>
+</div>
+<br>
+<br><br>
+<br>
+<br>
+

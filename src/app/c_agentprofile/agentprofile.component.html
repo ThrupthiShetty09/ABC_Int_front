@@ -1,0 +1,81 @@
+
+
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="#">
+    <img src="assets/IMG/logo.png" width="150" height="50" alt="">
+  </a>
+ 
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <a class="navbar-brand" >SAPPHIRE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <button class="btn btn-primary" href="" (click)="main1()">Home <span class="sr-only">(current)</span></button>
+
+     
+      
+    </div>
+  </div>
+  <div class="dropdown">
+  <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/IMG/proLogo.png" width="25" height="25" alt="">
+    
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+      <button class="dropdown-item" href="#"  (click)="logout()">Logout</button>
+   
+  </div>
+</div>
+
+</nav>
+<br><br><br>
+<div class="container">
+<table class="table table-sm" style="background-color: #00CCFF;">
+<tbody *ngFor='let age of getData'>
+  <tr>
+      <th scope="row"> Name</th>
+      <td>{{age.empname}}</td>
+    </tr>
+    <tr>
+      <th scope="row"> Branch</th>
+      <td>{{age.empbranch}}</td>
+    </tr>
+    <tr>
+      <th scope="row"> Contact</th>
+      <td>{{age.empcontact}}</td>
+    </tr>
+    <tr>
+      <th scope="row"> Mail</th>
+      <td>{{age.empmail}}</td>
+    </tr>
+  
+    <tr>
+      <th scope="row"> Username</th>
+      <td>{{age.username}}</td>
+    </tr>
+    <tr>
+      <th scope="row"> Password</th>
+      <td>{{age.password}}</td>
+    </tr>
+    <tr>
+      <th scope="row"> Address</th>
+      <td>{{age.address}}</td>
+    </tr>
+    <tr>
+      <th scope="row"> DOB</th>
+      <td>{{age.empdob}}</td>
+    </tr>
+    
+    
+ 
+</tbody>
+</table>
+</div>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn  btn-lg" style="background-color: #00CCFF;" tabindex="-1" role="button" aria-disabled="false" (click)="main1()">BACK</button>&nbsp;&nbsp;&nbsp;
+<input type="button" class="btn  btn-lg" style="background-color: #00CCFF;" tabindex="-1" (click)="Updated()" value="Update"/>&nbsp;&nbsp;&nbsp;
+<a href="#" class="btn  btn-lg" style="background-color: #00CCFF;" tabindex="-1" role="button" aria-disabled="false" (click)="deleteagent()">DELETE</a>

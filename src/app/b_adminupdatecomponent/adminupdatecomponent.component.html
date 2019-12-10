@@ -1,0 +1,180 @@
+
+  <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-lightblue bg-light fixed-top">
+      <div class="container">
+ <a class="navbar-brand" href="#">
+    <img src="assets/image/logo.png" width="200" height="50">
+  </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> 
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+ <ul class="nav  navbar-nav nav-flex-icons ml-auto ">
+           <li class="nav-item">
+          <a class="nav-link" href="admindashboard"><i class="fa fa-heart"></i><strong><h5>Home</h5></strong></a>
+          </li>
+            <li class="nav-item">
+          <a class="nav-link" href="login"><i class="fa fa-heart"></i><strong><h5>Logout</h5></strong></a>
+          </li>
+       
+      </ul>
+        </div>
+        <!-- Collapsible content -->
+      </div>
+    </nav>
+    <br>
+    <br>
+<div class="abc">
+<div class="container my-4 py-4" >
+
+
+    <!--Section: Block Content-->
+    <section>
+
+      <div class="card">
+        <div class="card-body">
+
+          <h5 class="text-center font-weight-bold mb-4">Edit Profile</h5>
+
+          <hr>
+
+          <!--Grid row-->
+          <div class="row">       
+
+  <div class="col-md-12">         
+<!-- <div class="container"   *ngIf = "openform"> -->
+  <form ngForm>
+<div  >
+<div class="container my-4">
+
+  <!-- Section -->
+  <section>
+    <div class="row d-flex justify-content-center" >
+      <!--First column-->
+    <div class="form-group form-group-lg">
+
+        <div class="md-form md-outline form-lg">
+            <label for="empId">Employee ID</label>
+         <input type="number" class="form-control" id="empId"
+         required
+         [(ngModel)]="model.empId" name="empId" #name='ngModel'placeholder="Enter a empId" class="form-control form-control-lg" >
+        
+        </div>
+        
+        
+        <div class="md-form md-outline form-lg">
+            <label for="Email">Name</label>
+          <input type="text"  class="form-control" id="name"
+         [(ngModel)]="model.name" name="name" placeholder="Enter Name">
+        
+        </div>
+        
+       
+        <div class="md-form md-outline form-lg">
+          <label for="DOB">Date of Birth</label>
+  <input type="Date" class="form-control" id="DOB"
+         required
+         [(ngModel)]="model.DOB" name="DOB" #name='ngModel' placeholder="Enter a Date of Birth">  
+          
+        </div>
+
+        <div class="md-form md-outline form-lg">
+ <label for="contact">Phone Number</label>
+      <input type="number" class="form-control" id="phone_num"
+         required
+         [(ngModel)]="model.phone_num" name="phone_num" #name='ngModel' placeholder="Enter Contact number">
+        
+    </div>
+<div class="md-form md-outline form-lg">
+ <label for="username">UserName</label>
+      <input type="text" class="form-control" id="username"
+         required
+         [(ngModel)]="model.username" name="username" #name='ngModel'placeholder="Enter UserName">
+         
+    </div>
+<div class="md-form md-outline form-lg">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password"
+         required
+         [(ngModel)]="model.password" name="password" #name='ngModel' placeholder="Enter Password">
+        
+    </div>
+<div class="md-form md-outline form-lg">
+    <label for="role">Role</label>
+      <input type="String" class="form-control" id="role"
+         required
+         [(ngModel)]="model.role" name="role" #name='ngModel' placeholder="Enter role">
+            
+    </div>
+    <br>
+        <button class="btn btn-block btn-primary btn-lg btn btn-success" type="submit"(click)="update()">Update</button>
+
+      </div>
+      <!--First column-->
+
+    </div>
+    <!--First row-->
+
+  </section>
+  </div>
+
+  </div>
+  <!-- Section -->
+  </form>
+<!-- </div> -->
+</div>
+</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <hr class="my-5">
+</div>
+
+
+
+<footer class="page-footer text-dark ">
+  <!-- Footer Elements -->
+<div class="container mt-5 mb-4 text-center">
+ <div class="row md-3">
+      <!-- Grid column -->
+      <div class="col-md-6 offset-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+                <strong>ABC Bank</strong>
+            </h6>
+            <hr class=" accent-2 mb-4 mt-0 d-inline-block" style="width: 60px;">
+            <p>ABC provides a full range of services in consumer, SME and corporate banking. As a bank born and bred in Asia, ABC understands the intricacies of doing business in the region’s most dynamic markets. ABC is committed to building lasting relationships with customers, and positively impacting communities through supporting social enterprises, as it banks the Asian way.</p>
+        </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 ">
+            <h6 class="text-uppercase font-weight-bold">
+                <strong>Contact</strong>
+            </h6>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+                <i class="fas fa-home  mr-3"></i> Bangalore-562110, India</p>
+            <p>
+                <i class="fas fa-envelope mr-3"></i> www.abcbank.com</p>
+            <p>
+                <i class="fas fa-phone mr-3"></i> 1800-2345-2345</p>
+        </div>
+      <!-- Grid column -->
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
+
+
+
+
+
+
+

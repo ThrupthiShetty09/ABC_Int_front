@@ -1,0 +1,79 @@
+
+<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+<div class="container-fluid" >
+
+
+<nav class="navbar navbar sticky-top navbar-expand-lg navbar-dark " style="background-color: #9F497C;">
+  <a class="navbar-brand col-sm-3" href="#">HOME</a>
+  <a class="navbar-brand col-sm-3" href="#">FAQ</a>
+  <a class="navbar-brand col-sm-3" href="#">ABOUT US</a>
+  <a class="navbar-brand col-sm-3" href="#">CONTACT US</a>
+  
+</nav>
+
+<br><br><br>
+
+
+
+<!--     login-->
+
+<div class="card mb-3" style="max-width: 900px; margin:auto;">
+  <div class="row no-gutters">
+    <div class="col-md-4 overlay-card">
+      <img src="./assets/IMG/login.jpg" class="card-img" alt="lock image" style="width: 900px;height: 400px;">
+    </div>
+    <div class="col-md-8 " >
+      <div class="card-body card-img-overlay" >
+     <p style="font-family:'Allerta Stencil'; color: blue;">{{message}}</p>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="row">
+            <div class="form-group col-lg-6 ">
+              <label for="exampleInputEmail1" style="font-family:'Allerta Stencil';"><h6>Username</h6></label>
+              <input type="text" class="form-control" formControlName="userid" required="true"/>
+                  <div *ngIf="submitted && f.userid.errors" class="help-block">
+                        <div *ngIf="f.userid.errors.required">UserId is required</div>
+                  </div>
+            </div>
+      
+            </div>
+             <div class="row">
+            <div class="form-group col-lg-6">
+              <label for="exampleInputPassword1" style="font-family:'Allerta Stencil';"><h6>Password</h6></label>
+           <input type="password" class="form-control" formControlName="password" required="true" />
+                <div *ngIf="submitted && f.password.errors" class="help-block">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                </div>
+            </div>
+           </div>
+         
+            <button type="submit" class="btn btn-secondary">Submit</button>
+           
+           
+      </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
